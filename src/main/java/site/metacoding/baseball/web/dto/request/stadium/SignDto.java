@@ -6,7 +6,7 @@ import site.metacoding.baseball.domain.stadium.Stadium;
 
 @Setter
 @Getter
-public class JoinDto {
+public class SignDto {
 	private String stadiumname;
 	
 	public Stadium toEntity() {
