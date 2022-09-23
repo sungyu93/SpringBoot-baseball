@@ -15,12 +15,12 @@ import site.metacoding.baseball.web.dto.response.stadium.ListDto;
 public class StadiumService {
 	private final StadiumDao stadiumDao;
 	
-	public void 야구장등록하기(SignDto joinDto) {
-		Stadium stadium = joinDto.toEntity();
+	public void 야구장등록하기(SignDto signDto) {
+		Stadium stadium = signDto.toEntity();
 		stadiumDao.insert(stadium);
 	}
 	
-	public List<ListDto> 야구장목록보기() {
+	public List<Stadium> 야구장목록보기() {
 		return stadiumDao.findAll();
 	}
 	public void 야구장삭제하기(Integer id) {
